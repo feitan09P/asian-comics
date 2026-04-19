@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Asian Comics</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <header>
+        <h1>Asian Comics</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="./pages/manga.html">Manga (Japon)</a></li>
+                <li><a href="./pages/manhwa.html">Manhwa (Corée)</a></li>
+                <li><a href="./pages/manhua.html">Manhua (Chine)</a></li>
+                <li><a href="./pages/inscription.html">Inscription</a></li>
+                <li><a href="./pages/apropos.html">À Propos</a></li>
+                <li><button id="theme-toggle" class="theme-btn">☀️ Mode Clair</button></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="form-wrapper">
+        <section class="form-container">
+            <h2>Créer un compte lecteur</h2>
+            <p>Rejoignez notre communauté pour sauvegarder vos favoris !</p>
+
+            <form action="#" method="POST">
+                <fieldset>
+                    <legend>Informations Personnelles</legend>
+                    
+                    <div class="input-group">
+                        <label for="nom">Nom complet :</label>
+                        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">Adresse Email :</label>
+                        <input type="email" id="email" name="email" required placeholder="exemple@email.com">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="password">Mot de passe :</label>
+                        <input type="password" id="password" name="password" required minlength="8">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Vos Préférences</legend>
+                    <p class="radio-label">Quel est votre style préféré ?</p>
+                    
+                    <div class="radio-group">
+                        <input type="radio" id="pref-manga" name="preference" value="manga" checked>
+                        <label for="pref-manga">Manga</label>
+
+                        <input type="radio" id="pref-manhwa" name="preference" value="manhwa">
+                        <label for="pref-manhwa">Manhwa</label>
+
+                        <input type="radio" id="pref-manhua" name="preference" value="manhua">
+                        <label for="pref-manhua">Manhua</label>
+                    </div>
+                </fieldset>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">J'accepte les conditions d'utilisation du site.</label>
+                </div>
+
+                <button type="submit" class="submit-btn">S'inscrire</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+         <p>Projet réalisé par GAIER et zahy - Année 2025-2026</p>
+        <p>Projet Web EMSI 2025-2026. Données fournies par <a href="https://jikan.moe/" target="_blank">Jikan API</a>.</p>
+    </footer>
+</body>
+</html>

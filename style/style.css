@@ -1,0 +1,331 @@
+/* Variables Globales et Factorisation */
+:root {
+    --primary-color: #1a1a2e;
+    --secondary-color: #16213e;
+    --accent-color: #e94560;
+    --text-color: #ebebeb;
+    --bg-color: #0f3460;
+    --card-bg: #1f4287;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Menu de Navigation */
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--accent-color);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+/* Accueil - Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+/* Grille pour les résultats API */
+.grid-container {
+    display: grid;
+    /* Remplacez auto-fit par auto-fill ici : */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 25px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Cartes (Manga/Manhwa/Manhua) */
+.card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    transition: transform 0.4s ease; /* Prépare l'animation fluide */
+}
+
+/* Applique le zoom uniquement sur l'image quand on survole toute la carte */
+.card:hover img {
+    transform: scale(1.08); /* Zoom de 8% */
+}
+
+.card-info {
+    padding: 15px;
+}
+
+.card-info h3 {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+    color: var(--accent-color);
+}
+
+.description {
+    font-size: 0.9rem;
+    height: 80px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    color: #ccc;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--primary-color);
+    margin-top: 40px;
+}
+
+footer a {
+    color: var(--accent-color);
+}
+/* --- Formulaire d'inscription --- */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 600px;
+}
+
+.form-container h2 {
+    color: var(--accent-color);
+    text-align: center;
+    margin-top: 0;
+}
+
+.form-container p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ccc;
+}
+
+fieldset {
+    border: 1px solid var(--secondary-color);
+    border-radius: 8px;
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+legend {
+    color: var(--accent-color);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: inherit;
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    outline: 2px solid var(--accent-color);
+}
+
+.radio-label {
+    margin-top: 0 !important;
+    text-align: left !important;
+    font-weight: bold;
+}
+
+.radio-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #d63d56;
+}
+/* Override text colors to turquoise */
+header h1, 
+.form-container h2, 
+legend {
+    color: #00E5FF !important;
+}
+/* Personnalisation de la couleur des titres individuels d'œuvres */
+.card-info h3 {
+    /* Code pour "Turquoise Vif" */
+    color: #ccf517 !important;
+}
+/* Style for the Read/Info Button inside the cards */
+.read-btn {
+    display: block;
+    text-align: center;
+    background-color: transparent;
+    color: #00CED1; /* Turquoise text */
+    border: 2px solid #00CED1; /* Turquoise border */
+    padding: 8px 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect: Fills in the button with turquoise when hovered */
+.read-btn:hover {
+    background-color: #00CED1;
+    color: #1a1a2e; /* Dark text on hover */
+    box-shadow: 0 0 10px rgba(0, 206, 209, 0.5); /* Soft turquoise glow */
+}
+/* --- BARRE DE RECHERCHE --- */
+.search-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#search-bar {
+    padding: 12px 20px;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 25px;
+    border: 2px solid var(--accent-color);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+#search-bar:focus {
+    box-shadow: 0 0 10px rgba(0, 206, 209, 0.5); /* Lueur Turquoise */
+}
+
+/* --- BOUTON DARK/LIGHT MODE --- */
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--text-color);
+    padding: 5px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.theme-btn:hover {
+    background: var(--text-color);
+    color: var(--primary-color);
+}
+
+/* --- LIGHT MODE VARIABLES --- */
+/* Quand le body a la classe 'light-mode', on remplace les couleurs foncées par des couleurs claires */
+body.light-mode {
+    --primary-color: #d1d8e0;
+    --secondary-color: #a5b1c2;
+    --bg-color: #f5f6fa;
+    --card-bg: #ffffff;
+    --text-color: #2f3640;
+}
+
+/* Ajustements spécifiques pour le mode clair pour garder un bon contraste */
+body.light-mode header {
+    background-color: #ffffff;
+    color: #2f3640;
+}
+
+body.light-mode nav a {
+    color: #2f3640;
+}
+
+body.light-mode nav a:hover {
+    color: var(--accent-color);
+}
+
+body.light-mode .description {
+    color: #718093;
+}

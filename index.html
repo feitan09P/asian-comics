@@ -1,36 +1,38 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil - Asian Comics</title>
-    <link rel="stylesheet" href="./style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asian Comics</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 <body>
-    <header>
-        <h1>Asian Comics</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="./pages/manga.html">Manga (Japon)</a></li>
-                <li><a href="./pages/manhwa.html">Manhwa (Corée)</a></li>
-                <li><a href="./pages/manhua.html">Manhua (Chine)</a></li>
-                <li><a href="./pages/inscription.html">Inscription</a></li>
-                <li><a href="./pages/apropos.html">À Propos</a></li>
-                <li><button id="theme-toggle" class="theme-btn">☀️ Mode Clair</button></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main class="hero">
-        <h2>Bienvenue dans l'Univers des Bulles Asiatiques</h2>
-        <p>Découvrez les œuvres les mieux notées du Japon, de la Corée du Sud et de la Chine.</p>
-        <p>Explorez nos catégories via le menu !</p>
-    </main>
+<nav>
+  <div class="logo"><span>Asian</span> Comics</div>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="pages/manga.html">Manga</a></li>
+    <li><a href="pages/manhwa.html">Manhwa</a></li>
+    <li><a href="pages/manhua.html">Manhua</a></li>
+  </ul>
+</nav>
 
-    <footer>
-        <p>Projet réalisé par GAIER et zahy - Année 2025-2026</p>
-        <p>Projet Web EMSI 2025-2026. Données fournies par <a href="https://jikan.moe/" target="_blank">Jikan API</a>.</p>
-    </footer>
+<main>
+  <div class="hero">
+    <h1>Asian <span>Comics</span><br>All in one place.</h1>
+    <p>Top-rated manga, manhwa, and manhua from Japan, Korea, and China.</p>
+    <div class="hero-links">
+      <a href="pages/manga.html" class="pill">Manga — Japan</a>
+      <a href="pages/manhwa.html" class="pill">Manhwa — Korea</a>
+      <a href="pages/manhua.html" class="pill">Manhua — China</a>
+    </div>
+  </div>
+</main>
+
+<footer>
+  Asian Comics — Data from <a href="https://jikan.moe/" target="_blank">Jikan API</a>
+</footer>
+
 </body>
 </html>

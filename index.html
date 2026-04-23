@@ -1,38 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asian Comics</title>
-  <link rel="stylesheet" href="./style/style.css">
+  <title>Asian Comics — Accueil</title>
+  <link rel="stylesheet" href="style/style.css">
 </head>
 <body>
 
+<!-- Manga background layers -->
+<div class="manga-ink"></div>
+<div class="manga-halftone"></div>
+<div class="manga-panels"></div>
+<div class="manga-slash"></div>
+
 <nav>
-  <div class="logo"><span>Asian</span> Comics</div>
-  <ul class="nav-links">
-    <li><a href="index.html" class="active">Home</a></li>
-    <li><a href="pages/manga.html">Manga</a></li>
-    <li><a href="pages/manhwa.html">Manhwa</a></li>
-    <li><a href="pages/manhua.html">Manhua</a></li>
+  <a href="index.html" class="logo"><span>Asian</span> Comics</a>
+  <ul class="nav-liens">
+    <li><a href="index.html" class="actif">Accueil</a></li>
+    <li><a href="pages/manga.html">Manga 🇯🇵</a></li>
+    <li><a href="pages/manhwa.html">Manhwa 🇰🇷</a></li>
+    <li><a href="pages/manhua.html">Manhua 🇨🇳</a></li>
+    <li><a href="pages/connexion.html">Connexion</a></li>
+    <li><a href="pages/inscription.html">Inscription</a></li>
   </ul>
 </nav>
 
 <main>
+
   <div class="hero">
-    <h1>Asian <span>Comics</span><br>All in one place.</h1>
-    <p>Top-rated manga, manhwa, and manhua from Japan, Korea, and China.</p>
-    <div class="hero-links">
-      <a href="pages/manga.html" class="pill">Manga — Japan</a>
-      <a href="pages/manhwa.html" class="pill">Manhwa — Korea</a>
-      <a href="pages/manhua.html" class="pill">Manhua — China</a>
+    <h1>Asian <span>Comics</span><br>au même endroit.</h1>
+    <p>Les meilleurs manga, manhwa et manhua notés par la communauté MyAnimeList.</p>
+    <div class="hero-boutons">
+      <a href="pages/manga.html"  class="btn-rouge">🇯🇵 Manga</a>
+      <a href="pages/manhwa.html" class="btn-contour">🇰🇷 Manhwa</a>
+      <a href="pages/manhua.html" class="btn-contour">🇨🇳 Manhua</a>
     </div>
   </div>
+
+  <div class="categories">
+    <a href="pages/manga.html" class="cat-carte">
+      <div class="cat-emoji">🇯🇵</div>
+      <div class="cat-titre">Manga</div>
+      <div class="cat-desc">Les plus grands titres japonais — One Piece, Naruto, Berserk...</div>
+    </a>
+    <a href="pages/manhwa.html" class="cat-carte">
+      <div class="cat-emoji">🇰🇷</div>
+      <div class="cat-titre">Manhwa</div>
+      <div class="cat-desc">La crème des webtoons coréens — Solo Leveling, Tower of God...</div>
+    </a>
+    <a href="pages/manhua.html" class="cat-carte">
+      <div class="cat-emoji">🇨🇳</div>
+      <div class="cat-titre">Manhua</div>
+      <div class="cat-desc">Les chefs-d'œuvre chinois — Doupo Cangqiong, Martial Peak...</div>
+    </a>
+  </div>
+
 </main>
 
 <footer>
-  Asian Comics — Data from <a href="https://jikan.moe/" target="_blank">Jikan API</a>
+  © 2025–2026 Asian Comics
 </footer>
 
+<script src="./script.js"></script>
 </body>
 </html>

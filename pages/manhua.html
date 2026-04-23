@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +7,42 @@
   <link rel="stylesheet" href="../style/style.css">
 </head>
 <body>
+<div class="manga-ink"></div>
+<div class="manga-halftone"></div>
+<div class="manga-panels"></div>
+<div class="manga-slash"></div>
 
 <nav>
-  <div class="logo"><span>Asian</span> Comics</div>
-  <ul class="nav-links">
-    <li><a href="../index.html">Home</a></li>
-    <li><a href="manga.html">Manga</a></li>
-    <li><a href="manhwa.html">Manhwa</a></li>
-    <li><a href="manhua.html" class="active">Manhua</a></li>
+  <a href="../index.html" class="logo"><span>Asian</span> Comics</a>
+  <ul class="nav-liens">
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="manga.html">Manga 🇯🇵</a></li>
+    <li><a href="manhwa.html">Manhwa 🇰🇷</a></li>
+    <li><a href="manhua.html" class="actif">Manhua 🇨🇳</a></li>
+    <li><a href="connexion.html">Connexion</a></li>
+    <li><a href="inscription.html">Inscription</a></li>
   </ul>
 </nav>
 
 <main>
-  <div class="page-title">Top <span>Manhua</span></div>
-  <div class="page-sub">Best-rated Chinese manhua from MyAnimeList</div>
-  <input type="text" id="search" class="search-input" placeholder="Search manhua..." oninput="filterComics()">
-  <div class="grid" id="grid"></div>
+  <div class="titre-page">Top <span>Manhua</span></div>
+  <div class="sous-titre">Les manhuas chinois les mieux notés sur MyAnimeList (~500 titres)</div>
+  <input type="text" id="recherche" class="barre-recherche" placeholder="🔍 Rechercher un manhua..." oninput="rechercherComics()">
+  <div class="grille" id="grille"></div>
+  <div class="pagination">
+    <button class="page-btn" id="btn-precedent" onclick="pagePrecedente()">← Précédent</button>
+    <span class="page-info" id="info-page">Page 1 / …</span>
+    <button class="page-btn" id="btn-suivant" onclick="pageSuivante()">Suivant →</button>
+  </div>
 </main>
 
-<footer>
-  Asian Comics — Data from <a href="https://jikan.moe/" target="_blank">Jikan API</a>
-</footer>
+<footer>© 2025–2026 Asian Comics</footer>
+
+<div class="modal-overlay" id="modal-overlay" onclick="fermerModalFond(event)">
+  <div class="modal-boite"><div id="modal-contenu"></div></div>
+</div>
 
 <script src="../script.js"></script>
-<script>loadComics('manhua');</script>
+<script>chargerComics('manhua');</script>
 </body>
 </html>
